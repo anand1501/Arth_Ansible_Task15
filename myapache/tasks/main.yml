@@ -1,0 +1,16 @@
+---
+# tasks file for myapache
+
+
+- name: "installing httpd web server"
+  package:
+    name: "httpd"
+
+- copy:
+    dest: "/var/www/html/index.html"
+    content: "for load-blancing testing!!"
+
+- service:
+    name: "httpd"
+    state: restarted
+
